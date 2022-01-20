@@ -1,0 +1,164 @@
+.container {
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    background-color: rgb(38, 38, 104);
+    padding: 0 70px;
+    transition: all 0.3s ease-in;
+    top: 0px;
+    z-index: 10;
+}
+
+.container1 {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 0px solid black;
+}
+
+.logo:hover {
+    cursor: pointer;
+    border-bottom: 5px solid rgb(155, 155, 155);
+}
+
+.logo:hover .image, .logo:hover h1 {
+    color:rgb(155, 155, 155);
+}
+
+.image {
+    color: white;
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s ease-in;
+    position: absolute;
+    top: 18px; 
+}
+
+.logo h1 {
+    color: rgb(241, 241, 241);
+    transition: all 0.2s ease-in;
+    position: absolute;
+    left: 35px;
+    top: 13px; 
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+    transition: width 0.3s ease-in;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    line-height: 60px;
+    border-bottom: 0px solid black;
+    transition: all 0.3s ease;
+}
+
+.buttons a:not(:last-child):hover {
+    color: rgb(155, 155, 155);
+    border-bottom:5px solid rgb(155, 155, 155);
+    
+}
+
+.signup {
+    padding: 6px 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup:hover {
+    background-color: white;
+    color: rgb(38, 38, 104);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    color: white;
+    height: 25px;
+    width: 25px;
+    transition: all 0.3s ease-in;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+    color: rgb(155, 155, 155);
+}
+
+
+    @media (max-width: 746px){
+        .container {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 625px){
+        .buttons {
+            width: 300px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .buttons {
+            position: absolute;
+            display:flex;
+            flex-direction: column;
+            background-color: rgb(38, 38, 104);
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 90px);
+            min-height: 200px;
+            max-height: 500px;
+            justify-content: space-around;
+            border-radius: 10px;
+            transition: left 0.3s ease-in;
+        }
+
+        .buttons a:not(:last-child):hover {
+            border-bottom: none;
+            
+        }
+
+        .inactive {
+            left: -110%;
+        }
+
+
+        .buttons a ,.buttons a button{
+            font-size: 20px;
+            height: fit-content;
+            line-height: 100%;
+        }
+
+        .container {
+            padding: 0 30px;
+        }
+    }
